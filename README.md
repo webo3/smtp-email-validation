@@ -8,7 +8,7 @@ email to bad email address before they bounce.
 
 ##### How this works:
 
-SmtpEmailValidation::test($from = 'user@domain.from', $to = 'user@domain.to')
+SmtpEmailValidation::test($from = 'user@domain.from', $to = 'user@domain.to');
 
 We first check get the MX for the email that we are trying to send to, then we connection to the MX founds one after another by priority to verify if we can connect to.
 Then we try to simulate a true SMTP connection by sending a command to the server to see what the server will respond.
