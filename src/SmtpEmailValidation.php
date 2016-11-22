@@ -73,10 +73,10 @@ class SmtpEmailValidation
             );
         } else {
             // say helo
-            $sock->write("HELO " . $fromDomain);
+            $sock->write("HELO " . $fromDomain)->read();
             
             // tell of sender
-            $sock->write("MAIL FROM: <" . $from . ">");
+            $sock->write("MAIL FROM: <" . $from . ">")->read();
             
             // ask of recepient
             $reply = $sock->write("RCPT TO: <" . $to . ">")->read();
