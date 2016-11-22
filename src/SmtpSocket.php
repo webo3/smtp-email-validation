@@ -106,8 +106,8 @@ class SmtpSocket
      */
     public function read()
     {
-        $this->debug[] = '< ' . $data;
         $data = fread($this->sock, 2082);
+        $this->debug[] = '< ' . $data;
         return $data;
     }
 
@@ -119,8 +119,8 @@ class SmtpSocket
      */
     public function write($data)
     {
-        $this->debug[] = '> ' . $data;
         fwrite($this->sock, $data . "\r\n");
+        $this->debug[] = '> ' . $data;
         return $this;
     }
 
