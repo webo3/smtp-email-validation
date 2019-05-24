@@ -1,0 +1,25 @@
+{
+    "name": "webo3/smtp-email-validation",
+    "description": "Emulate a SMTP connection to verify the email address existance.",
+    "license": "MIT",
+    "homepage": "https://www.webo3.com",
+    "authors": [
+        {
+            "name": "Hugues Joyal",
+            "email": "hjoyal@webo3.com"
+        }
+    ],
+    "require": {
+        "php" : ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "webO3\\SmtpEmailValidation\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
